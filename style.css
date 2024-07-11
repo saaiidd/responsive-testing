@@ -1,0 +1,196 @@
+/* Custom properties */
+
+:root {
+    --spacer: 1rem;
+
+    --clr-neutral-900: #171717;
+    --clr-neutral-700: #333;
+    --clr-neutral-300: #cfcfcf;
+    --clr-neutral-100: #fff;
+    --clr-accent-400: #59e89c;
+    --clr-accent-500: #00986a;
+
+    --ff-primary: "PT Sans", sans-serif;
+
+    --fw-700: 700;
+    --fw-400: 400;
+
+    --box-shadow: 0 0.25em 1.5em rgba(0, 0, 0, 0.15);
+}
+
+/* reset */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Utility classes */
+.flow-content>*+* {
+    margin-top: 1.25rem;
+}
+
+/* general styling */
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 1.25rem;
+    font-weight: 400;
+    background-color: #C4B2B2;
+    color: var(--clr-neutral-900);
+    margin: 0;
+    line-height: 1.7;
+}
+
+h1 {
+    font-weight: 400;
+}
+
+h1 span {
+    font-weight: 700;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: inherit;
+    padding: 0.75em 1.5em;
+    background-color: var(--clr-accent-400);
+    color: var(--clr-neutral-900);
+}
+
+.hero__section {
+    padding-block: 8.25em;
+    padding-inline: 1.3em;
+}
+
+.hero--bg--color {
+    background-color: #fff;
+}
+
+.hero__wrapper {
+    display: flex;
+    gap: 1.3em;
+    max-width: 60rem;
+    margin-inline: auto;
+}
+
+.left__hero__details h1 {
+    font-size: 1.625rem;
+}
+
+.left__hero__details p {
+    margin-block: 2.5em;
+    max-width: 540px;
+}
+
+.left__hero__details .btn {
+    padding-inline: 2.5em;
+}
+
+.opportunity__section {
+    background-color: var(--clr-neutral-900);
+    padding-block: 7em;
+
+
+}
+
+.opportunity__section h2 {
+    color: var(--clr-accent-400);
+    font-size: 2.5rem;
+    margin-block: 20px;
+    text-align: center;
+}
+
+.opportunity__card img {
+    max-width: 255px;
+}
+
+.opportunity__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 1.875em;
+    max-width: 80em;
+    padding-inline: 1.3em;
+}
+
+.opportunity__card>* {
+    color: #fff;
+}
+
+.opportunity__card h3 {
+    margin-block: 13px;
+}
+
+
+.features__section {
+    background-color: #fff;
+    padding-block: 8em;
+}
+
+.features__wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 89em;
+    padding-inline: 1.1em;
+    margin-inline: auto;
+    gap: 1.2em;
+}
+
+.features__section h2 {
+    font-size: 2.125rem;
+    padding: 20px;
+    margin-left: 25px;
+}
+
+.features__wrapper>* {
+    flex: 1;
+}
+
+/* hero section media query */
+
+
+@media screen and (max-width:900px) {
+    .hero__wrapper {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+/* opportunity section media query */
+
+@media screen and (max-width:1200px) {
+    .opportunity__wrapper {
+        flex-direction: column;
+    }
+}
+
+
+/* features section media query */
+
+@media screen and (max-width:850px) {
+    .features__wrapper {
+        flex-direction: column;
+    }
+}
